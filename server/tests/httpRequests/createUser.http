@@ -1,0 +1,35 @@
+### 201 {user}
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "nickname": "test6",
+    "email": "mail6@mail.sfs",
+    "passwHash": "1234",
+    "birthday": "2000-08-06",
+    "gender": "male"
+}
+
+### 500 model valid error
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "nickname": "t",
+    "email": "mail6@mail.sfs",
+    "passwHash": "1234",
+    "birthday": "2000-08-06",
+    "gender": "male"
+}
+
+### 500 db error
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "nickname": "test10",
+    "email": "mail6@mail.sfs",
+    "passwHash": "1234",
+    "birthday": "2000-08-06",
+    "gender": "male"
+}
